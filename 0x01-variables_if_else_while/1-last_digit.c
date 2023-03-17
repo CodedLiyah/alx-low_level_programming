@@ -22,7 +22,7 @@ int main(void)
 	if (m == 0)
 		printf("Last digit of %d is %d and is 0", n, m);
 	if (m < 6 && m != 0)
-		printf("last digit of %d is %d is less than 6", n, m);
+		printf("last digit of %d is %d and is less than 6", n, m);
 	printf("\n");
 
 	return (0);
