@@ -1,33 +1,29 @@
 #include "main.h"
 /**
  * _strspn - length of a prefix substring
- * @s: the string to be scanned
- * @accept: the string containing the characters to accept
+ * @s: string to be scanned
+ * @accept: string containing characters to match
  *
- * Return: returns the number of bytes
+ * Return: result
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0, r;
-	char *start = accept;
+	unsigned int i, n, value, check;
 
-	while (*s)
+	value = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		r = 0;
-		while (*accept)
+		check = 0;
+
+		for (n = 0; accept[n] != '\0'; n++)
 		{
-			if (*accept)
+			if (accept[n] == s[i])
 			{
-				count++;
-				r = 1;
-				break;
+				value++;
+				check = 1;
 			}
-			accept++;
 		}
-		s++;
-		accept = start;
-		if (r == 0)
-			break;
+		if (check == 0)
 	}
-	return (count);
 }
