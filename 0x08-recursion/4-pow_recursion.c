@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * _pow_recursions - function returns the value of x to the power of y
- * @x : interger x
- * @y : interger y
- * Return: x raised to the power of y
+ * _pow_recursion - returns the value of x raisedto the power of y
+ * @x: the value to multiply
+ * @y: the times to multiply the value
+ *
+ * Return: the value multiplied y times
  */
 int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 		return (-1);
-	else if (y == 0)
+	if (y == 0)
 		return (1);
-	return (_pow_recursion(x, y - 1) * x);
+	return (x * _pow_recursion(x, y - 1));
 }
