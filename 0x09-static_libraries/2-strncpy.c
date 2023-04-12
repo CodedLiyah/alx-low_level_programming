@@ -1,28 +1,21 @@
 #include "main.h"
 
 /**
- *_strcpy - update value.
- *@dest: value to be evaluate.
- *@src: value to be evaluate.
- *Return: Always 0.
+ * *_strncpy - finds the length of the string
+ * @dest: pointer to the string
+ * @src: pointer
+ * @n: int
+ * Return: destination
  */
-
-char *_strcpy(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int l = 0;
-	int x = 0;
+	int i;
 
-	while (*(src + l) != '\0')
-	{
-		l++;
-	}
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
 
-	for (; x < l; x++)
-	{
-		dest[x] = src[x];
-	}
-
-	dest[l] = '\0';
+	for ( ; i < n; i++)
+		dest[i] = '\0';
 
 	return (dest);
 }
