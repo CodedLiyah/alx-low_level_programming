@@ -1,0 +1,10 @@
+0x0E. C - Structures, typedef
+
+What is typedef structure?
+struct is used to define a structure. typedef is used to give an alias name to a data type and the data type can be a predefined data type (like int,float, char) or a user defined data type. After the second declaration we will have to refer to that structure as "struct StructName" throughout the program.
+
+in C++, there is no difference between 'struct' and 'typedef struct' because, in C++, all struct/union/enum/class declarations act like they are implicitly typedef'ed, as long as the name is not hidden by another declaration with the same name.
+
+
+A structure is a user defined data type available in C that allows to combine data items of different kinds.
+
