@@ -1,0 +1,3 @@
+ a program that processes its input data to produce output that is used as input in another program.
+provides the ability for the inclusion of header files, macro expansions, conditional compilation, and line control.
+preprocessor , complier, assembler linker  
